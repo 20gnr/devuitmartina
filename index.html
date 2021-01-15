@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/martina.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>18</title>
+  </head>
+  <body>
+    <audio autoplay="true" src="html-audio.mp3">
+      Si per qualque motiu no pots escoltar es temazo que ha de sonar es perquè, o Github ha petat, o jo no sé programar.
+    </audio>
+    <div class="regalos">
+    <center><img src="img/martinasobant.jpeg" width="250" height="250" style="-webkit-filter: drop-shadow(3px 3px 3px #222); filter: drop-shadow(3px 3px 3px #222); alt="Martina sobant"></center>
+    <h1>Molts d'anys Martina!</h1>
+    <p>Bueno Miquela, ja tens es devuit anys, per sorpresa de tots. No perquè les facis, sino perquè hi has arribat viva i sencera, cosa que ningú s’esperava. Però tot i que encara no mos ho creguem, ho volem celebrar amb tu. Sabem que si ses coses haguéssin estat diferents haguessis montat un fiestón rollo perroflauta amb moltes Estrelles i moltres drogues de per enmig que acabaria amb qualque trio amb una persona de cabells arrissats que es nom comença per C i acaba per Arri, però estam en pandèmia mundial y es lo que hay. <br><br>
+      Mira sa part positiva. Ara tens més temps per estar a foravila i controlar el ganado. A ver si a partir d’ara no se t’escapa cap vaca, que ha ha hagut de venir un virus mortal perquè les tenguis vigilades. Però que tampoc se te puji es mood “Frank de la jungla” a n’es cap, que si ara te pillen matant Bambis vas arrestada. Primer aviso, que no crec que canviar es camuflatge per un mono taronja te caigui bé. <br><br>
+      Per si d’acàs acabes a n’es calabozos, t’hem preparat un parell de regals perquè disfrutis una amica antes de que te tanquin. Más vale prevenir que curar.</p>
+    <button class="collapsible">Regal 1</button>
+    <div class="content">
+      <p>Tu ara llegeixes això tranquil·lament, però noltros estam davant un ordenador estrujant-mos ses neurones per pensar a ver que te regalam. <br><br>
+        Hem intentat regalar-te un Vallespí, però tardava massa a arribar i Amazon mos posava pegues. Per això, hem decidit regalar-te un amic a piles, perquè així tens lo millor d’ell sense haver-lo de veure. Bueno, lo millor de cada tio. Ja mos agrairàs que a partir d’ara no hauràs de sortir amb mantes a les 3 d’es vespre a La Era i que te pilli sa mare d’es susodicho. <br><br>
+        Te presentam a n’en Manolo, que ve sense bombo. Esperam que estiguis molt de temps fora tenir-ne un.</p>
+    </div>
+    <button class="collapsible">Open Section 2</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Open Section 3</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    </div>
+
+    <script src="js/confetti.js"></script>
+    <script>
+        //  confetti.stop();
+
+        const startit = () => {
+          setTimeout(function () {
+            console.log("start");
+            confetti.start();
+          }, 1000);
+        };
+
+        const stopit = () => {
+          setTimeout(function () {
+            console.log("stop");
+            confetti.stop();
+          }, 6000);
+        };
+
+        startit();
+        stopit();
+    </script>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+  </body>
+</html>
